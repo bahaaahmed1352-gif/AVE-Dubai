@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vh: 1vh;
+  --ave-bg: #0b0b0b;
+  --ave-espresso: #121110;
+  --ave-gold: #d4af37;
+  --ave-amber: #ffbf00;
+  --ave-cream: #f5f2eb;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--ave-bg);
+  color: var(--ave-cream);
+}
+
+body {
+  min-height: calc(var(--vh) * 100);
+  font-family: theme('fontFamily.sans');
+}
+
+/* Luxury glass dock */
+.glass-dock {
+  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent)
+      border-box,
+    rgba(11, 11, 11, 0.85);
+}
+
+/* Menu cinematic transition */
+body.ave-menu-transition {
+  transition: transform 0.45s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: scale(0.96);
+  opacity: 0.4;
+  filter: blur(2px);
+}
